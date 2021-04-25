@@ -1,0 +1,102 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.footer {
+    background-color: $footer-bg-color;
+
+    &__header {
+        @include flex-center(row);
+        justify-content: space-between;
+        border-bottom: 1px solid #686868;
+    }
+
+    &__nav {
+        display: flex;
+
+        & .nav__item {
+            @include clear-list;
+            padding: 20px 0 20px 60px;
+        }
+
+        & .nav__link {
+            color: $footer-text-color;
+            text-transform: uppercase;
+            font-size: 13px;
+            transition: .5s all;
+
+            &:hover {
+                color: #fff
+            }
+        }
+
+    }
+
+    &__block {
+        color: $footer-text-color;
+        @include flex-center(row);
+    }
+
+    &__content {
+        @include flex-center(row);
+        font-size: 12px;
+        justify-content: space-between;
+        margin-top: 45px !important;
+        margin-bottom: 45px !important;
+
+    }
+
+    &__text {
+        width: 25%;
+
+    }
+
+    &__map {
+        border-left: 1px solid $footer-text-color;
+        border-right: 1px solid $footer-text-color;
+        padding: 0 100px;
+    }
+
+    &__contact {
+        @include clear-list
+    }
+
+    &__list {
+
+        &:first-child {
+            padding: 0;
+        }
+
+        & .list__item,
+        .list__contact {
+            @include clear-list;
+            margin-bottom: 5px;
+
+
+            &:hover {
+                color: #fff;
+
+                .list__icon,
+                .list__link {
+                    color: #fff;
+                    transition: .5s all;
+                }
+            }
+        }
+
+        & .list__contact {
+            @include clear-list;
+            margin-bottom: 5px;
+        }
+
+        & .list__link,
+        .list__icon {
+            color: $footer-text-color;
+            font-size: 12px;
+            padding-left: 5px;
+
+
+
+        }
+    }
+
+}

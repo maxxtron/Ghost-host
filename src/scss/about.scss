@@ -1,0 +1,74 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.about {
+    background-color: #fff;
+    padding: 40px;
+
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__text {
+        width: 30%;
+        border-right: 2px dotted $buy-border-color;
+        padding-right: 60px;
+
+    }
+
+    &__parag {
+        color: #747474;
+        font-size: 13px;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 25px;
+        margin-bottom: 20px;
+
+
+    }
+
+    &__imgs {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+
+    }
+
+    &__profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & .profile__img {
+            margin-bottom: 5px;
+        }
+
+        & .profile__name {
+            color: $name;
+            margin-bottom: 3px;
+        }
+
+        & .profile__job {
+            color: $job;
+            font-size: 13px;
+            margin-bottom: 3px;
+        }
+
+
+        & .profile__ico {
+            color: $social-ico;
+            margin-bottom: 3px;
+            font-size: 13px;
+            padding: 0 4px;
+
+            &:hover {
+                color: #1f89ba;
+            }
+        }
+    }
+}
